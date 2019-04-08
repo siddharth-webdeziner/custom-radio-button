@@ -17,6 +17,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "radio-box": [
+        "dist/radio-box"
+      ],
+      "radio-box/*": [
+        "dist/radio-box/*"
+      ],
+      "custom-radio-button": [
+        "dist/custom-radio-button"
+      ],
+      "custom-radio-button/*": [
+        "dist/custom-radio-button/*"
+      ]
+    }
   }
 }
