@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomRadioButtonModule } from '../../dist/custom-radio-button'
+import { CheckboxModule } from 'dynamic-custom-checkbox';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { CustomRadioButtonModule } from '../../dist/custom-radio-button'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CustomRadioButtonModule
+    CustomRadioButtonModule,
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
