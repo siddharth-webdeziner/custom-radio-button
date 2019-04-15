@@ -1,24 +1,70 @@
-# CustomRadioButton
+# Custom radio button component
+Custom radio button is highly configrable and easy to use.
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+# Table of contents
 
-## Code scaffolding
+* [Features](#features)
+* [Getting started](#getting-started)
+* [API](#api)
+* [Basic example](#basic-example)
 
-Run `ng generate component component-name --project custom-radio-button` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project custom-radio-button`.
-> Note: Don't forget to add `--project custom-radio-button` or else it will be added to the default project in your `angular.json` file. 
+## Features
 
-## Build
+* [x] Custom radio button bindings to property or object
+* [x] Custom theme changes
+* [x] Custom label text
+* [x] Custom Enable/Disable mode
+* [x] No external dependencies (easy to use!),
+* [x] Minimal styling (easy to customize!),
+* [x] Great performance.
 
-Run `ng build custom-radio-button` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Installation
 
-## Publishing
+```sh
+$ npm i custom-radio-button
+```
 
-After building your library with `ng build custom-radio-button`, go to the dist folder `cd dist/custom-radio-button` and run `npm publish`.
+## Getting started
 
-## Running unit tests
+```js
+import { CustomRadioButtonModule } from 'custom-radio-button';
 
-Run `ng test custom-radio-button` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  imports: [
+    CustomRadioButtonModule
+  ]
+})
+```
 
-## Further help
+## API
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+| Input            | Type            | Default                 | Required | Description                                                                                         |
+| ---------------- | --------------- | ----------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| [customBgColor]        | string | `#eee`                    | no      | Will add background-color (#ddd) of the radio button.                                                 |
+| [customSelectedBgColor]        | string          | `#fff` | no       | Will add inner-selected-color (#ff0000) of the radio button.                                                         |
+| [boxType]    | string         | `circle`                 | no       | Can change the shape of the checkbox to `square`. Default `square`.                                                              |
+| [customBorderColor]    | string          | `#333`           | no       | Will add border-color of the checkbox.            |
+| [customSize] | string         | `medium`                 | no       | Will increase/decrease the size of the checkbox 3 more options `small`,`large`,`Xlarge`.   |
+| [labelContent]            | string          | `Label`  | no       | Will change the label text. |
+| [checkbox]            | boolean          | `false`                  | no       | If you want to checked the checkbox by defalut. Set it to`true`.  |
+| [boxdisabled]            | boolean          | `false`                  | no       | If you want to disabled the checkbox by defalut. Set it to`true`. |
+| [customClick]    | Function        | `false`                 | no       | Allow to create custom click function that is invoked onChange event of checkbox. |
+
+### Basic example
+
+```js
+<dynamic-custom-checkbox 
+[customBgColor]="'#ddd'" 
+[customArrowColor]="'red'" 
+[boxType]="'circle'" 
+[customBorderColor]="'blue'"  
+[customSize]="'Xlarge'"
+[labelContent]="'siddharth'"
+(customClick)="customClick($event)"
+[checkbox]="true"
+[boxdisabled]="true"></dynamic-custom-checkbox>
+
+customClick = (event) => {
+    console.log("print the event value : ", event);
+};
+```

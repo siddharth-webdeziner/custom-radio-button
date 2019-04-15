@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'newcomponent';
-  radioClick = (event) => {
+  customClick = (event) => {
     console.log("print the event value : ", event);
   };
 }
