@@ -42,7 +42,7 @@ import { CustomRadioButtonModule } from 'custom-radio-button';
 | ---------------- | --------------- | ----------------------- | -------- | --------------------------------------------------------------------------------------------------- |
 | [customBgColor]        | string | `#eee`                    | no      | Will add background-color (#ddd) of the radio button.                                                 |
 | [customSelectedBgColor]        | string          | `#fff` | no       | Will add inner-selected-color (#ff0000) of the radio button.                                                         |
-| [boxType]    | string         | `circle`                 | no       | Can change the shape of the checkbox to `square`. Default `square`.                                                              |
+| [boxType]    | string         | `circle`                 | no       | Can change the shape of the radio button to `square`. Default `circle`.                                                              |
 | [customBorderColor]    | string          | `transparent`           | no       | Will add border-color of the radio button.            |
 | [customSize] | string         | `Xlarge`                 | no       | Will increase/decrease the size of the radio button 3 more options `small`,`large`,`medium`.   |
 | [boxlabel]            | string          | `Label`  | no       | Will change the label text. |
