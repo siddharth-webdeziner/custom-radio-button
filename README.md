@@ -1,27 +1,67 @@
-# Newcomponent
+# Custom radio button component
+Custom radio button is highly configrable and easy to use.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+# Table of contents
 
-## Development server
+* [Features](#features)
+* [Getting started](#getting-started)
+* [API](#api)
+* [Basic example](#basic-example)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+* [x] Custom radio button bindings to property or object
+* [x] Custom theme changes
+* [x] Custom label text
+* [x] Custom Enable/Disable mode
+* [x] No external dependencies (easy to use!),
+* [x] Minimal styling (easy to customize!),
+* [x] Great performance.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installation
 
-## Build
+```sh
+$ npm i custom-radio-button
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Getting started
 
-## Running unit tests
+```js
+import { CustomRadioButtonModule } from 'custom-radio-button';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  imports: [
+    CustomRadioButtonModule
+  ]
+})
+```
 
-## Running end-to-end tests
+## API
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+| Input            | Type            | Default                 | Required | Description                                                                                         |
+| ---------------- | --------------- | ----------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| [customBgColor]        | string | `#eee`                    | no      | Will add background-color (#ddd) of the radio button.                                                 |
+| [customSelectedBgColor]        | string          | `#fff` | no       | Will add inner-selected-color (#ff0000) of the radio button.                                                         |
+| [boxType]    | string         | `circle`                 | no       | Can change the shape of the checkbox to `square`. Default `square`.                                                              |
+| [customBorderColor]    | string          | `transparent`           | no       | Will add border-color of the radio button.            |
+| [customSize] | string         | `Xlarge`                 | no       | Will increase/decrease the size of the radio button 3 more options `small`,`large`,`medium`.   |
+| [boxlabel]            | string          | `Label`  | no       | Will change the label text. |
+| [boxchecked]            | boolean          | `false`                  | no       | If you want to checked the radio button by defalut. Set it to`true`.  |
+| [boxdisabled]            | boolean          | `false`                  | no       | If you want to disabled the radio button by defalut. Set it to`true`. |
+| [customInnerBorderColor]    | string  | `transparent`                 | no       | Will add inner-border-color of the radio button. |
 
-## Further help
+### Basic example
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```js
+<custom-radio-button 
+[boxType]="'square'"
+[customInnerBorderColor]="'#fff'" 
+[boxlabel]="'one'" 
+[customBgColor]="'red'" 
+[customSelectedBgColor]="'black'"
+[boxchecked]="false" 
+[boxdisabled]="false"
+[customSize]="'medium'"
+[customBorderColor]="'green'"></custom-radio-button>
+
+```
