@@ -1,9 +1,18 @@
 
 <router-outlet></router-outlet>
-<lib-custom-radio-button [boxType]="'square'" [boxname]="'www'" [customInnerBorderColor]="'#fff'" [boxlabel]="'one'" [customBgColor]="'red'" [customSelectedBgColor]="'black'"></lib-custom-radio-button>
-<lib-custom-radio-button [customSize]="'large'" [boxname]="'www'" [boxlabel]="'one'" [customBgColor]="'blue'" [customSelectedBgColor]="'black'"></lib-custom-radio-button>
-<lib-custom-radio-button [customSize]="'medium'" [boxname]="'www'" [boxlabel]="'two'" [boxchecked]="false" [customBgColor]="'pink'" [customBorderColor]="'green'"></lib-custom-radio-button>
-<lib-custom-radio-button [boxType]="'square'" [customSize]="'small'" [boxname]="'www'" [boxlabel]="'three'" [customBgColor]="'green'" [boxchecked]="false" [boxdisabled]="false"></lib-custom-radio-button>
+<custom-radio-button 
+[boxType]="'square'"
+[customInnerBorderColor]="'#fff'" 
+[boxlabel]="'one'" 
+[customBgColor]="'red'" 
+[customSelectedBgColor]="'black'"
+[boxchecked]="false" 
+[boxdisabled]="false"
+[customSize]="'medium'"
+[customBorderColor]="'green'"></custom-radio-button>
+<custom-radio-button [customSize]="'large'" [boxlabel]="'www'" [boxlabel]="'one'" [customBgColor]="'blue'" [customSelectedBgColor]="'black'"></custom-radio-button>
+<custom-radio-button [customSize]="'medium'" [boxlabel]="'www'" [boxlabel]="'two'" [boxchecked]="false" [customBgColor]="'pink'" [customBorderColor]="'green'"></custom-radio-button>
+<custom-radio-button [boxType]="'square'" [customSize]="'small'" [boxlabel]="'www'" [boxlabel]="'three'" [customBgColor]="'green'" [boxchecked]="false" [boxdisabled]="false"></custom-radio-button>
 
 
 <dynamic-custom-checkbox 

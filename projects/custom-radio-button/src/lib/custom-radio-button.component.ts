@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'lib-custom-radio-button',
+  selector: 'custom-radio-button',
   template: `
   <label class="radio-container" 
   [ngClass]="{
@@ -14,7 +14,7 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
   }"
   >
   {{radioLabel}}
-    <input type="radio" (change)="change()" [name]="radioName" [disabled]="radioDisabled" [checked]="radioChecked">
+    <input type="radio" [name]="radioName" [disabled]="radioDisabled" [checked]="radioChecked">
     <span 
     class="radio-checkmark" 
     [ngStyle]="{
@@ -54,8 +54,5 @@ export class CustomRadioButtonComponent implements OnInit {
     this.radioChecked = this.boxchecked;
     this.radioName = this.boxname;
     this.radioLabel = this.boxlabel;
-    console.log('disabled : ',this.boxdisabled);
-    console.log('checked : ',this.boxchecked);
-    console.log('name : ',this.boxname);
   }
 }

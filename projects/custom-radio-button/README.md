@@ -43,28 +43,25 @@ import { CustomRadioButtonModule } from 'custom-radio-button';
 | [customBgColor]        | string | `#eee`                    | no      | Will add background-color (#ddd) of the radio button.                                                 |
 | [customSelectedBgColor]        | string          | `#fff` | no       | Will add inner-selected-color (#ff0000) of the radio button.                                                         |
 | [boxType]    | string         | `circle`                 | no       | Can change the shape of the checkbox to `square`. Default `square`.                                                              |
-| [customBorderColor]    | string          | `#333`           | no       | Will add border-color of the checkbox.            |
-| [customSize] | string         | `medium`                 | no       | Will increase/decrease the size of the checkbox 3 more options `small`,`large`,`Xlarge`.   |
-| [labelContent]            | string          | `Label`  | no       | Will change the label text. |
-| [checkbox]            | boolean          | `false`                  | no       | If you want to checked the checkbox by defalut. Set it to`true`.  |
-| [boxdisabled]            | boolean          | `false`                  | no       | If you want to disabled the checkbox by defalut. Set it to`true`. |
-| [customClick]    | Function        | `false`                 | no       | Allow to create custom click function that is invoked onChange event of checkbox. |
+| [customBorderColor]    | string          | `transparent`           | no       | Will add border-color of the radio button.            |
+| [customSize] | string         | `Xlarge`                 | no       | Will increase/decrease the size of the radio button 3 more options `small`,`large`,`medium`.   |
+| [boxlabel]            | string          | `Label`  | no       | Will change the label text. |
+| [boxchecked]            | boolean          | `false`                  | no       | If you want to checked the radio button by defalut. Set it to`true`.  |
+| [boxdisabled]            | boolean          | `false`                  | no       | If you want to disabled the radio button by defalut. Set it to`true`. |
+| [customInnerBorderColor]    | string  | `transparent`                 | no       | Will add inner-border-color of the radio button. |
 
 ### Basic example
 
 ```js
-<dynamic-custom-checkbox 
-[customBgColor]="'#ddd'" 
-[customArrowColor]="'red'" 
-[boxType]="'circle'" 
-[customBorderColor]="'blue'"  
-[customSize]="'Xlarge'"
-[labelContent]="'siddharth'"
-(customClick)="customClick($event)"
-[checkbox]="true"
-[boxdisabled]="true"></dynamic-custom-checkbox>
+<custom-radio-button 
+[boxType]="'square'"
+[customInnerBorderColor]="'#fff'" 
+[boxlabel]="'one'" 
+[customBgColor]="'red'" 
+[customSelectedBgColor]="'black'"
+[boxchecked]="false" 
+[boxdisabled]="false"
+[customSize]="'medium'"
+[customBorderColor]="'green'"></custom-radio-button>
 
-customClick = (event) => {
-    console.log("print the event value : ", event);
-};
 ```
